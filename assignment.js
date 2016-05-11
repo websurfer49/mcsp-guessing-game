@@ -62,7 +62,7 @@
 //
 // No changes should be made if there's no quote.
 //
-// TIP: Assume that if there's an openning double quote, there's a closing
+// TIP: Assume that if there's an opening double quote, there's a closing
 // double quote as well.
 
 
