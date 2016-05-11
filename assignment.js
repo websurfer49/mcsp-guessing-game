@@ -1,5 +1,5 @@
 // Define a function named updateToDoList. It takes one argument:
-//   todoList (<ul> dom element)
+//   todoList (<ul> DOM element)
 //
 // The function will iterate over the list items (<li>) in the list and will
 // do the following:
@@ -7,6 +7,8 @@
 //   * Applies the "important" CSS class if its text starts with "URGENT".
 //     Tip: Applying a CSS class means adding on top of what's there.
 //   * Make no change otherwise.
+
+
 
 
 // Define a function named createLinks. It takes one argument:
@@ -38,6 +40,8 @@
 // </ul>
 
 
+
+
 // Write a function pullQuote which takes in one argument.
 //   article (<article> DOM element)
 //
@@ -58,6 +62,8 @@
 //
 // Tip: Assume that if there is a double quote, there will be a closing double
 // quote in the text.
+
+
 
 
 // Define a function named createTable. It takes one argument:

@@ -4,7 +4,7 @@ window.onload = function() {
 
   suite('updateToDoList', function() {
     var ul;
-    var addListText = function (text, precede) {
+    var addListText = function(text, precede) {
       var li = document.createElement('li');
       li.textContent = (precede.toUpperCase() + ' ' + text).trim();
       li.className = 'fooStyle'
