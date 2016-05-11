@@ -43,23 +43,3 @@ You may encounter challenges that seem confusing or impossible. Don't despair! T
 When you're done with the main assignment, your page should look like this. Green check marks next to each test means the entire test suite is passing.
 
 ![](images/passing.png)
-
-### Deploy your work
-
-Read over the following articles to learn how to deploy this web site to Surge.
-
-- [Getting started with Surge](http://surge.sh/help/getting-started-with-surge)
-- [Remembering a domain](http://surge.sh/help/remembering-a-domain)
-
-A good domain name for this project is `USERNAME-js-dom.surge.sh` where `USERNAME` is your GitHub username in all **lowercase** letters. Once deployed and everything works as you expect, copy the URL to your site and paste it below.
-
-PASTE YOUR SURGE URL HERE
-
-### Submit your work
-
-After everything works as you expect, it's time to submit your work.
-
-1. Re-deploy your project to Surge.
-1. Push your code to GitHub, the `origin` remote.
-1. Copy the URL to **your GitHub repository**.
-1. Paste that URL in the textfield for the corresponding exercise.
