@@ -10,29 +10,27 @@
 
 
 
-// Define a function named createLinks that takes one argument.
-//   links (object)
+// Define a function named createList that takes one argument.
+//   sites (object)
 //
 // The object has the following structure:
 //    {
-//      TEXT: "URL",
-//      TEXT: "URL",
-//      TEXT: "URL",
+//      'TITLE': 'URL',
+//      'TITLE': 'URL',
+//      'TITLE': 'URL',
 //      ...
 //    }
 //
-// Where TEXT is the link's text content and URL is the link's href value.
-//
-// The function must return an unordered list DOM element of links with the
-// given label and url. For example, given:
+// The function must return an <ul> element that contains <li> elements that
+// each contain an <a> element. For example, given:
 //    {
-//      "Google": "https://www.google.com",
-//      "Facebook": "https://www.facebook.com",
-//      "GitHub": "https://github.com",
-//      "Galvanize": "https://www.galvanize.com"
+//      'Google': 'https://www.google.com',
+//      'Facebook': 'https://www.facebook.com',
+//      'GitHub': 'https://github.com',
+//      'Galvanize': 'https://www.galvanize.com'
 //    }
 //
-// It must return the following:
+// It returns the following:
 //    <ul>
 //      <li><a href="https://www.google.com">Google</a></li>
 //      <li><a href="https://www.facebook.com">Facebook</a></li>
