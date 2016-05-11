@@ -2,7 +2,7 @@ window.onload = function() {
   var assert = chai.assert;
   mocha.setup('tdd');
 
-  suite('updateToDoList', function() {
+  suite('updateTodoList', function() {
     var ul;
     var addListText = function(text, precede) {
       var li = document.createElement('li');
@@ -11,7 +11,7 @@ window.onload = function() {
       ul.appendChild(li);
     };
 
-    setup(function () {
+    setup(function() {
       ul = document.createElement('ul');
     });
 
@@ -21,7 +21,7 @@ window.onload = function() {
       addListText('Complete the Inspection', 'COMPLETED');
       addListText('Review the Documents', 'COMPLETED');
 
-      updateToDoList(ul);
+      updateTodoList(ul);
       assert.strictEqual(ul.childNodes.length, 1);
       assert.strictEqual(ul.firstChild.tagName, 'LI');
       assert.strictEqual(ul.firstChild.textContent, 'Paint the Rooms');
@@ -33,7 +33,7 @@ window.onload = function() {
       addListText('Complete the Inspection', 'URGENT');
       addListText('Review the Documents', '');
 
-      updateToDoList(ul);
+      updateTodoList(ul);
       assert.strictEqual(ul.childNodes.length, 4);
       assert.strictEqual(ul.childNodes[0].tagName, 'LI');
       assert.strictEqual(ul.childNodes[0].className, 'fooStyle');
@@ -78,9 +78,9 @@ window.onload = function() {
     });
   });
 
-  suite('pullQuote', function() {
+  suite('extractQuote', function() {
     var article, p;
-    setup(function () {
+    setup(function() {
       article = document.createElement('article');
       p = document.createElement('p');
       article.appendChild(p);
@@ -88,7 +88,7 @@ window.onload = function() {
 
     test('Does not make any changes if there is no double quote', function() {
       p.textContent = 'There are no quotes here'
-      pullQuote(article);
+      extractQuote(article);
       assert.strictEqual(article.childNodes.length, 1);
       assert.strictEqual(article.firstChild.tagName, 'P');
       assert.strictEqual(article.firstChild.textContent, 'There are no quotes here');
@@ -96,7 +96,7 @@ window.onload = function() {
 
     test('Creates an unordered list of links', function() {
       p.textContent = 'Neale Donald Walsch said, "Life begins at the end of your comfort zone." This is your daily quote.'
-      pullQuote(article);
+      extractQuote(article);
       assert.strictEqual(article.childNodes.length, 1);
       assert.strictEqual(article.firstChild.tagName, 'BLOCKQUOTE');
       assert.strictEqual(article.firstChild.textContent,
@@ -105,7 +105,7 @@ window.onload = function() {
   });
 
   suite('createTable', function() {
-    var testRow = function (data, cellType, result) {
+    var testRow = function(data, cellType, result) {
       assert.strictEqual(result.tagName, 'TR');
       assert.strictEqual(result.childNodes.length, data.length);
       for(var i = 0; i < data.length; i++) {
@@ -116,7 +116,7 @@ window.onload = function() {
       }
     }
 
-    var testTable = function (data, result) {
+    var testTable = function(data, result) {
       assert.strictEqual(result.tagName, 'TABLE');
       assert.strictEqual(result.childNodes.length, 3);
 
