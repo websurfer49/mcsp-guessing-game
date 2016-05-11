@@ -49,10 +49,10 @@ window.onload = function() {
     });
   });
 
-  suite('createLinks', function() {
+  suite('createList', function() {
     test('Creates an unordered list with no links', function() {
       var links = {};
-      var list = createLinks(links);
+      var list = createList(links);
       assert.strictEqual(list.tagName, 'UL');
       assert.strictEqual(list.childNodes.length, 0);
     });
@@ -63,7 +63,7 @@ window.onload = function() {
         'Facebook': 'https://www.facebook.com',
         'Galvanize': 'https://www.galvanize.com'
       };
-      var list = createLinks(links);
+      var list = createList(links);
       assert.strictEqual(list.tagName, 'UL');
       assert.strictEqual(list.childNodes.length, 3);
       var node, url;
