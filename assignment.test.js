@@ -94,7 +94,7 @@ window.onload = function() {
       assert.strictEqual(article.firstChild.textContent, 'There are no quotes here');
     });
 
-    test('Creates an unordered list of links', function() {
+    test('Replaces a quote in a paragraph with a blockquote', function() {
       p.textContent = 'Neale Donald Walsch said, "Life begins at the end of your comfort zone." This is your daily quote.'
       extractQuote(article);
       assert.strictEqual(article.childNodes.length, 1);
