@@ -19,7 +19,7 @@
 //   article (<article> DOM element)
 // Assume the article contains at least one paragraph.
 //
-// The function will hide the paragraph if anywhere the text contains
+// The function will hide any child paragraphs of article if anywhere the text contains
 // "CONFIDENTIAL"
 
 
@@ -27,8 +27,8 @@
 // Define a function named checkAll that takes in one argument
 //   checkbox (<input type="checkbox"> DOM element).
 //
-// The function will check all of its sibling checkboxes if the input checkbox
-// is checked.
+// The function will mark all sibling checkboxes, of the input checkbox, as "checked" if the input checkbox
+// is marked as "checked".
 
 
 
