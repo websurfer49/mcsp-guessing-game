@@ -1,3 +1,13 @@
+// Define a function named createEmptyDiv that returns a DIV DOM node
+
+
+
+
+// Define a function named createDivWithClass that returns a DIV DOM node with the specified class
+
+
+
+
 // Define a function named updateTodoList that takes one argument.
 //   todoList (<ul> DOM element)
 //
@@ -11,7 +21,7 @@
 
 
 // Define a function named createList that takes one argument.
-//   sites (object)
+//   createList (object)
 //
 // The object has the following structure:
 //    {

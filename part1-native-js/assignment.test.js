@@ -2,6 +2,24 @@ window.onload = function() {
   var assert = chai.assert;
   mocha.setup('tdd');
 
+  suite('basic dom creation', function () {
+    test("it creates a div", function () {
+      let div = createEmptyDiv()
+
+      assert.strictEqual(div.nodeName, 'DIV')
+      assert.isNull(div.parentNode)
+    })
+
+    test("it creates a div with the specified class name", function () {
+      let happyDiv = createDivWithClass('happy')
+      let sadDiv = createDivWithClass('sad')
+
+      assert.isTrue(happyDiv.classList.contains('happy'))
+      assert.isTrue(sadDiv.classList.contains('sad'))
+      assert.isFalse(sadDiv.classList.contains('happy'))
+    })
+  })
+
   suite('updateTodoList', function() {
     var ul;
     var addListText = function(text, precede) {
