@@ -5,7 +5,7 @@ window.onload = function() {
 
   suite('basic dom creation', function () {
     test("it creates a div", function () {
-      let div = createEmptyDiv()
+      let div = createDiv()
 
       assert.strictEqual(div.nodeName, 'DIV')
       assert.isNull(div.parentNode)

@@ -1,9 +1,16 @@
-// Define a function named createEmptyDiv that returns a DIV DOM node
+// Define a function named createDiv that takes no arguments.
+// Return a <div> element.
+function createDiv() {
+  // return document.createElement('div');
+}
 
 
 
 
-// Define a function named createDivWithClass that returns a DIV DOM node with the specified class
+// Define a function named createDivWithClass that takes one argument.
+//   className (string)
+//
+// Return a <div> element with the given className.
 
 
 
@@ -125,36 +132,3 @@
 //
 // TIP: Assume that data array has at least three elements.
 // TIP: Assume that the elements of the data array are equal in length.
-
-
-
-
-/*
-
-  Assume you have the following HTML:
-
-  <div>
-    <button id="click-me" />
-
-    <div id="placeholder"></div>
-  </div>
-
-*/
-
-// Declare a function named buttonWasClicked that makes the follow happen:
-//
-//    when a user clicks on a button with the id "click-me"
-//      then the div with the id "placeholder" should have its innerText changed to "It worked!"
-//
-// NOTE: attach the listener directly to the button
-
-
-
-// make the follow happen:
-//
-//    when a user triggers a keydown event anywhere in the document
-//      when it's the down arrow key then the "placeholder" div's innerText should be changed to "down down"
-//      when it's the up arrow key then the "placeholder" div's innerText should be changed to "up up"
-//
-// NOTE: use e.key to figure out which key was pressed
-// NOTE: write this method directly - no need to wrap it in a function
