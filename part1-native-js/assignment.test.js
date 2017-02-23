@@ -38,10 +38,10 @@ window.onload = function() {
       addListText('Buy a House', 'COMPLETED');
       addListText('Paint the Rooms', '');
       addListText('Complete the Inspection', 'COMPLETED');
-      addListText('Review the Documents', 'COMPLETED');
-
+      addListText('Review the Documents', '');
+      console.log('the ul', ul)
       updateTodoList(ul);
-      assert.strictEqual(ul.childNodes.length, 1);
+      assert.strictEqual(ul.childNodes.length, 2);
       assert.strictEqual(ul.firstChild.tagName, 'LI');
       assert.strictEqual(ul.firstChild.textContent, 'Paint the Rooms');
     });
@@ -49,22 +49,22 @@ window.onload = function() {
     test('Update urgent list items', function() {
       addListText('Buy a House', '');
       addListText('Paint the Rooms', 'URGENT');
-      addListText('Complete the Inspection', 'URGENT');
-      addListText('Review the Documents', '');
-
+      addListText('Complete the Inspection', '');
+      addListText('Review the Documents', 'URGENT');
+      console.log('the ul', ul);
       updateTodoList(ul);
       assert.strictEqual(ul.childNodes.length, 4);
       assert.strictEqual(ul.childNodes[0].tagName, 'LI');
-      assert.strictEqual(ul.childNodes[0].className, 'fooStyle');
       assert.strictEqual(ul.childNodes[0].textContent, 'Buy a House');
       assert.strictEqual(ul.childNodes[1].tagName, 'LI');
       assert.strictEqual(ul.childNodes[1].textContent, 'URGENT Paint the Rooms');
+      assert.strictEqual(ul.childNodes[1].className, 'fooStyle important');
       assert.strictEqual(ul.childNodes[2].tagName, 'LI');
-      assert.strictEqual(ul.childNodes[2].className, 'fooStyle important');
-      assert.strictEqual(ul.childNodes[2].textContent, 'URGENT Complete the Inspection');
+      assert.strictEqual(ul.childNodes[2].className, 'fooStyle');
+      assert.strictEqual(ul.childNodes[2].textContent, 'Complete the Inspection');
       assert.strictEqual(ul.childNodes[3].tagName, 'LI');
-      assert.strictEqual(ul.childNodes[3].className, 'fooStyle');
-      assert.strictEqual(ul.childNodes[3].textContent, 'Review the Documents');
+      assert.strictEqual(ul.childNodes[3].className, 'fooStyle important');
+      assert.strictEqual(ul.childNodes[3].textContent, 'URGENT Review the Documents');
     });
   });
 

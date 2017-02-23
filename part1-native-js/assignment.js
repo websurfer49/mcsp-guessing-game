@@ -6,7 +6,6 @@ function createDiv() {
 
 
 
-
 // Define a function named createDivWithClass that takes one argument.
 //   className (string)
 //
@@ -24,6 +23,16 @@ function createDiv() {
 //     TIP: Applying a CSS class means adding on top of what's already there.
 //   * Make no change otherwise.
 
+function updateTodoList(ulthing){
+   ulthing.childNodes.forEach(function(item,index){
+     var currentText = item.innerHTML;
+     if (currentText.includes("COMPLETED")){
+       ulthing.removeChild(item);
+     } else if (currentText.substring(0,6)==="URGENT"){
+       item.classList.add("important");
+     }
+   })
+}
 
 
 
