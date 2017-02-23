@@ -26,7 +26,7 @@ function createDiv() {
 function updateTodoList(ulthing){
    ulthing.childNodes.forEach(function(item,index){
      var currentText = item.innerHTML;
-     if (currentText.includes("COMPLETED")){
+     if (currentText.substring(0,9)==="COMPLETED"){
        ulthing.removeChild(item);
      } else if (currentText.substring(0,6)==="URGENT"){
        item.classList.add("important");
