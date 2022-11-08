@@ -1,3 +1,4 @@
+
 // ### Feature 1: Guess once.
 // Using alert and prompt, write a program that asks the user to guess a number and then tells them if they were correct, or if they should have guessed higher or lower.
 
@@ -85,3 +86,4 @@ if(playAgain.toLowerCase() === "yes"){
   }
 }
 play();
+
